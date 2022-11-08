@@ -1,0 +1,35 @@
+<form (ngSubmit)="addHero()" #super = "ngForm">
+    <div class="form-group" ngModelGroup="FullName">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="name" ngModel name = "name" class="form-control" id="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="AlterEgo" class="form-label">AlterEgo</label>
+      <input type="text" ngModel name="AlterEgo" class="form-control" id="AlterEgo" required>
+    </div>
+    <div class="mb-3">
+        <label for="power" class="form-label">Power</label>
+        <br>
+        <select name="power" id="power" required>
+            <option value="" selected></option>
+            <option value="invisible">invisible</option>
+            <option value="raggiX">raggiX</option>
+            <option value="volo">volo</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="Enemy" class="form-label">Enemy</label>
+        <input type="text" ngModel name="Enemy" class="form-control" id="Enemy" maxlength="10">
+      </div>
+      <div class="mb-3">
+        <label for="Planet" class="form-label">Planet</label>
+        <input type="text" ngModel name="Planet" class="form-control" id="Planet" required minlength="5">
+      </div>
+      <div class="mb-3">
+        <label for="Weakness" class="form-label">Weakness</label>
+        <input type="text" ngModel name="Weakness" class="form-control" id="Weakness">
+      </div>
+      </div>
+      <button type="submit" [disabled]="super.invalid" class="btn btn-primary" (click)="addHero()">Invia</button>
+</form>

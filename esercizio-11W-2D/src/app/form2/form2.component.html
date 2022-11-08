@@ -1,0 +1,37 @@
+<form (ngSubmit)="addHero()" [formGroup]="form">
+    <div class="form-group" ngModelGroup="FullDescribe">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" formControlName="name" ngModel name="name"  class="form-control" id="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="AlterEgo" class="form-label">AlterEgo</label>
+        <input type="text" formControlName="AlterEgo" ngModel name="AlterEgo"  class="form-control" id="AlterEgo" required>
+      </div>
+      <div class="mb-3">
+        <label for="Power" class="form-label">Power</label>
+        <br>
+        <select name="power" formControlName="Power" id="power" required>
+            <option value="" selected></option>
+            <option value="invisible">invisible</option>
+            <option value="raggiX">raggiX</option>
+            <option value="volo">volo</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="Enemy" class="form-label">Enemy</label>
+        <input type="text" formControlName="Enemy" ngModel name="Enemy"  class="form-control" id="Enemy" required>
+      </div>
+      <div class="mb-3">
+        <label for="Planet" class="form-label">Planet</label>
+        <input type="text" formControlName="Planet" ngModel name="Planet"  class="form-control" id="Planet" required>
+      </div>
+      <div class="mb-3">
+        <label for="Weakness" class="form-label">Weakness</label>
+        <input type="text" formControlName="Weakness" ngModel name="Weakness"  class="form-control" id="Weakness" required>
+      </div>
+      <div class="mb-3">
+    <button type="submit" [disabled]="f.invalid" class="btn btn-primary" (click)="addUser()" >Submit</button>
+    </div>
+</form>
+
